@@ -1,0 +1,24 @@
+// =btn ($color)
+//     display: inline-block
+//     padding: 15px 25px
+//     border-radius: 32px
+//     text-decoration: none
+//     @if $color == "white"
+//         background-color: transparent
+//         &:hover
+//             background-color: #fff
+
+=btn ($color: #000, $border-color: #fff)
+    color: $color
+    text-decoration: none
+    border-radius: 25px
+    border: 1px solid $border-color
+    padding: 10px 20px
+
+=max-width ($width)
+    @media screen and (max-width: #{$width}px)
+        @content
+
+=min-width ($width)
+    @media screen and (min-width: #{$width}px)
+        @content

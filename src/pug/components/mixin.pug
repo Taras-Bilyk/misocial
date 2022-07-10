@@ -1,0 +1,67 @@
+- 
+    let mainMenu = [
+        {
+            name: "Home",
+            url: "#"
+        },
+        {
+            name: "Why MISOCIAL",
+            url: "#"
+        },
+        {
+            name: "Features",
+            url: "#"
+        },
+        {
+            name: "Articles",
+            url: "#"
+        },
+        {
+            name: "Pricing",
+            url: "#"
+        },
+    ]
+
+-
+    let cards = {
+        free: {
+            src: "../img/satelite",
+            alt: "Misocial free plan",
+            price: "0",
+            description: "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat.",
+            href: "#"
+        },
+        basic: {
+            src: "../img/robik",
+            alt: "Misocial basic plan",
+            price: "29",
+            description: "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat.",
+            href: "#"
+        },
+        vip: {
+            src: "../img/rocket",
+            alt: "Misocial vip plan",
+            price: "49",
+            description: "Lorem ipsum dolor sit amet. sed do eiusmod tempor incididunt ut. Labore et dolore magna aliqua. quis nostrud exercitation ullamco laboris. Ea commodo consequat.",
+            href: "#"
+        }
+    }
+
+mixin menu (items)
+    for item in items
+        li 
+            a(href=item.url) #{item.name}
+    //- li.get-started
+    //-     a(href="#" class=myclass) get started
+
+mixin card (item)
+    figure 
+        figcaption 
+            picture 
+                source(srcset=item.src + ".webp", type="image/webp")
+                img(src=item.src + ".png", alt=item.alt)
+            p.title-card personal
+            p.price <sup>$</sup>#{item.price}<span>/month</span> 
+            p.card-deskr #{item.description}
+            p.plan_button_p
+                a(href=item.href class="plan_a") select plan

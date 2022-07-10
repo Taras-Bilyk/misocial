@@ -1,0 +1,22 @@
+//- include mixin
+//- .wrapper
+header.header
+    .header_flex
+        a(href="#").logo_a 
+            .logo
+                img(src="../img/logo.png", alt="Misocial")
+                h1.h1 MISOCIAL
+        .burger
+            span.span1
+            span.span2
+            span.span3
+        .div_menu
+            ul.menu 
+                +menu(mainMenu)
+                //- +menu(mainMenu, "white")
+            a(href="#").g_s get started
+    p.p SOCIAL MARKETING & ANALYTICS
+    p.p2 Pricing Table
+    p.p3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+    p.pointer_p
+        a(href="#").pointer

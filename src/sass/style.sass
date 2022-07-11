@@ -20,6 +20,9 @@
 //     text-decoration: none
 //     border-radius: 25px
     // border: 1px solid $border-color
+body,
+html
+    scroll-behavior: smooth
 body
     margin: 0
 p 
@@ -34,7 +37,7 @@ p
     background-size: cover
     text-align: center
 .wrapper
-    max-width: 1920px
+    // max-width: 1920px
     margin: 0 auto
     text-align: center
 .header_flex
@@ -179,7 +182,8 @@ p
                 &:hover
                     &:before
                         display: block
-.wrapper .g_s
+.wrapper .g_s,
+.wrapper .f_g_s
     margin-right: 0
 .g_s,
 .f_g_s
@@ -207,6 +211,8 @@ p
     color: #ffffff
     font-weight: 700
     margin-bottom: 40px
+    +max-width(370)
+        font-size: 10px
     &:before
         content: ""
         position: absolute
@@ -343,6 +349,7 @@ p
     &:hover
         background-color: #6e45e2
         color: #fff
+        box-shadow: none
 .title-card
     font-size: 14px
     letter-spacing: 1px
@@ -376,6 +383,8 @@ p
     font-weight: 400
     margin: 0 72px
     margin-bottom: 54px
+    +max-width(420)
+        margin: 0 30px
 .plan_button_p
     margin-bottom: 65px
 .footer_bgi
@@ -478,9 +487,11 @@ hr
     margin-bottom: 33px
     display: block
 .copyright_flex
-    +max-width(715)
-        flex-wrap: wrap
-        justify-content: center
+    // +max-width(715)
+    //     flex-wrap: wrap
+    //     justify-content: center
+    +max-width(780)
+        display: block
     display: flex
     justify-content: space-between
     margin: 0 50px
@@ -492,8 +503,10 @@ hr
         margin: 0
         margin-bottom: 26px
 .footer_contacts
-    +max-width(715)
-        margin: 0 50px
+    margin-left: 20px
+    +max-width(780)
+        margin-left: 0
+        margin-right: 0
         margin-bottom: 20px
 .fb,
 .tw,
@@ -502,14 +515,52 @@ hr
     background-repeat: no-repeat
     margin: 0 5px
 .fb
-    background-image: url(../img/fb.png)
-    padding: 0 6px
+    svg
+        // background-image: url(../img/fb.png)
+        padding: 0 6px
+        height: 20px
+        width: 20px
+        display: inline-block
+        fill: #b4b4bb
+        transition: 0.3s all ease
+    &:hover
+        svg
+            fill: #6e45e2
 .tw
-    background-image: url(../img/tw.png)
-    padding: 0 9px
+    svg
+        // background-image: url(../img/tw.png)
+        padding: 0 9px
+        display: inline-block
+        height: 20px
+        width: 20px
+        fill: #b4b4bb
+        transition: 0.3s all ease
+    &:hover
+        svg
+            fill: #6e45e2
 .g
-    background-image: url(../img/g.png)
-    padding: 0 13px
+    svg
+        // background-image: url(../img/g.png)
+        padding: 0 13px
+        height: 20px
+        width: 20px
+        scale: 1.5
+        display: inline-block
+        fill: #b4b4bb
+        transition: 0.3s all ease
+    &:hover
+        svg
+            fill: #6e45e2
 .inst
-    background-image: url(../img/inst.png)
-    padding: 0 9px
+    svg 
+        // background-image: url(../img/inst.png)
+        padding: 0 9px
+        height: 20px
+        width: 20px
+        display: inline-block
+        fill: #b4b4bb
+        transition: 0.3s all ease
+        scale: 1.1
+    &:hover
+        svg
+            fill: #6e45e2

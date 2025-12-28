@@ -14,7 +14,7 @@ The site is made for Misocial.
 - Sass
 
 ## How to Run
-<div>Visit the site here: <a href="https://taras-bilyk.github.io/misocial/#main">https://taras-bilyk.github.io/misocial/#main/</a></div>
+<div>Visit the site here: <a href="https://taras-bilyk.github.io/misocial/">https://taras-bilyk.github.io/misocial/</a></div>
 
 
 ## Project Structure
